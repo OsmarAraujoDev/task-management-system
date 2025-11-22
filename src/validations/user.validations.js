@@ -9,7 +9,7 @@ const userSchemas = {
     }),
 
     getAll: Joi.object({
-        limit: Joi.number().integer().min(0).max(50).optional(),
+        limit: Joi.number().integer().min(0).max(1000).optional(),
         offset: Joi.number().integer().min(0).default(0).optional(),
         orderBy: Joi.string().valid('ASC', 'DESC').default('ASC').optional()
     }),
